@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="icon" href="./image/icon.ico" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>TODO</title>
+  </head>
+  <body>
+    <form
+      action="/user"
+      id="form-register"
+      method="GET"
+      enctype="multipart/form-data"
+    >
+      <strong id="caption">Profile</strong>
+      
+      <label for="name">name</label>
+      <input type="text" name="name" id="name" placeholder="name" />
+
+      <label for="username">username</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="username"
+        disabled
+      />
+
+      <label for="email">email</label>
+      <input type="text" name="email" id="email" placeholder="email"/>
+
+      <label for="gender">gender</label>
+      <input type="radio" name="gender" value="male" id="male" />
+      <label for="male">male</label>
+      
+      <input type="radio" name="gender" value="female" id="female"/>
+      <label for="female">female</label>
+      
+      <input type="radio" name="gender" value="other" id="other"/>
+      <label for="male">other</label>
+      
+      <label for="birthday">birthday</label>
+      <input type="date" name="birthday" id="birthday" placeholder="birthday" />
+      
+      <label for="avatar">avatar</label>
+      <img src="./image/user.png" alt="avatar" id="avatar" />
+      <input
+        type="file"
+        id="file-avatar"
+        onchange="reloadAvatar()"
+        accept="image/*"
+      />
+      <div id="error"></div>
+      <button type="submit">Save</button>
+      <div id="link">
+        <a href="/">Quay trở lại trang chủ</a>
+        <a href="/change-password">Đổi mật khẩu?</a>
+      </div>
+    </form>
+
+    <script src="./js/profile.js"></script>
+  </body>
+</html>

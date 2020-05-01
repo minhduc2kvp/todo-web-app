@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#form-login {
+  max-width: 300px;
+  margin: auto;
+  margin-top: 100px;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  background-color: plum;
+  padding: 20px 30px 20px 30px;
+  border-radius: 20px;
+  color: rgb(126, 0, 0);
+}
+
+#form-login #caption {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+#form-login label {
+  display: block;
+  width: 1005;
+}
+
+#form-login input {
+  display: inline-block;
+  width: 80%;
+  margin: 10px 0;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 15px;
+  font-style: italic;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(204, 109, 0);
+}
+
+#form-login #error {
+  display: block;
+  font-size: 15px;
+  width: 87%;
+  color: rgb(194, 5, 5);
+  padding: 5px 5px;
+  background-color: rgba(255, 0, 0, 0.377);
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+#form-login button {
+  margin-top: 10px;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  cursor: pointer;
+  padding: 3px 15px;
+  border:none;
+  border-radius: 5px;
+  color: palevioletred;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+#form-login button:hover {
+    color: rgb(116, 7, 7);
+    background-color: pink;
+}
+
+#form-login #link{
+    margin-top: 20px;
+    justify-content: space-around;
+    display: flex;
+}
+
+#form-login #link a{
+    display: block;
+    width: fit-content;
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(116, 7, 7);
+}
+
+#form-login #link a:hover{
+    text-decoration: underline;
+}

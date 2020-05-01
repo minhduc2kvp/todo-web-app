@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="icon" href="./image/icon.ico" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>TODO</title>
+  </head>
+  <body>
+    <form action="/api/change-password" id="form-login" method="POST">
+      <label for="oldpassword">your password</label>
+      <input type="password" name="oldpassword" id="oldpassword" placeholder="password" />
+      <label for="password">new password</label>
+      <input type="password" name="password" id="password" placeholder="password" />
+      <label for="password2">retype password</label>
+      <input type="password" name="password2" id="password2" placeholder="password" />
+      <div id="error"></div>
+      <button type="submit">submit</button>
+      <div id="link">
+        <a href="/">Quay lại trang chủ</a>
+      </div>
+    </form>
+
+    <script src="./js/forgot.js"></script>
+  </body>
+</html>

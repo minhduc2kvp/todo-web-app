@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="icon" href="./image/icon.ico" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>TODO</title>
+  </head>
+  <body>
+    <form action="/login" id="form-login" method="POST">
+      <strong id="caption">Login</strong>
+      <label for="username">username</label>
+      <input type="text" name="username" id="username" placeholder="username" />
+      <label for="password">password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="password"
+      />
+      <div id="error"></div>
+      <button type="submit">Login</button>
+      <div id="link">
+        <a href="/register">Chưa có tài khoản?</a>
+        <a href="/forgot">Quên mật khẩu</a>
+      </div>
+    </form>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>

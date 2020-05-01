@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1300px;
+  background-color: skyblue;
+  margin: auto;
+  font-family: cursive;
+  font-size: 20px;
+  color: royalblue;
+  padding: 10px 20px;
+}
+
+header#header {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+
+#header #brand {
+  display: flex;
+  text-decoration: none;
+  color: royalblue;
+  align-items: center;
+}
+
+#header #brand .logo img {
+  height: 50px;
+}
+#header #brand .title {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#header #user {
+  display: flex;
+  align-items: center;
+}
+#header #user a {
+  font-style: italic;
+  text-decoration: none;
+  color: royalblue;
+  transition: 0.3s;
+}
+#header #user a:hover {
+  text-decoration: underline;
+  color: hotpink;
+}
+#header #user a.avatar {
+  margin-right: 10px;
+}
+#header #user a.avatar:hover img {
+  transform: scale(1.1);
+  border: 2px solid hotpink;
+}
+#header #user a img {
+  transition: 0.1s;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid royalblue;
+}
+#header #user a#logout {
+  border: none;
+  font-family: cursive;
+  font-size: 15px;
+  font-weight: bold;
+  color: royalblue;
+  margin-left: 10px;
+  background-color: rgba(228, 148, 0, 0.904);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#header #user a#logout:hover {
+  background-color: rgb(184, 119, 0);
+}
+
+#menu #menu-pc {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  border-bottom: 2px dashed royalblue;
+  border-top: 2px solid royalblue;
+}
+#menu #menu-pc li.option {
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#menu #menu-pc li.option:hover {
+  color: hotpink;
+}
+
+#main {
+  margin-top: 20px;
+}
+#main .title {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+#list-item:empty {
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 350px;
+  height: 600px; /* change height to see repeat-y behavior */
+
+  background-image: radial-gradient(circle 5px at 5px 10px,
+  royalblue 99%,
+  transparent 0),
+    linear-gradient(
+      100deg,
+      rgba(211, 211, 211, 0),
+      rgb(135, 207, 235, 0.5) 50%,
+      rgba(211, 211, 211, 0) 80%
+    ),
+    linear-gradient(royalblue 20px, transparent 0),
+    linear-gradient(rebeccapurple 15px, transparent 0);
+
+  background-repeat: repeat-y;
+
+  background-size: 10px 100px,50px 100px,
+    /* highlight */ 350px 100px, 200px 100px;
+
+  background-position: 0 0 ,20px 0, /* highlight */ 20px 0,
+    20px 40px;
+
+  animation: shine 1s infinite ease-out;
+}
+@keyframes shine {
+  to {
+    background-position:0 0, 100% 0, /* move highlight to right */ 20px 0,
+      20px 40px;
+  }
+}
+
+#list-item {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+#list-item li.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0px;
+  border-bottom: 1px dotted royalblue;
+  margin-top: 15px;
+}
+#list-item li.item .infor .deadline {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 5px;
+  color: rebeccapurple;
+}
+#list-item li.item .infor .change-color {
+  margin: 10px 0 0 5px;
+  border: none;
+  padding: 0px 5px;
+  width: 10px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-family: cursive;
+}
+#list-item li.item .option {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: space-around;
+}
+#list-item li.item .option i {
+  cursor: pointer;
+  transition: 0.2s;
+}
+#list-item li.item .option i:hover {
+  color: hotpink;
+}
+
+/* ITEM MODAL */
+#modal-item {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  animation: modal 1s;
+  overflow: auto; /*Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@keyframes modal {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+#modal-item .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 0 20px 20px 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+#modal-item .modal-content .close {
+  margin-left: 100%;
+  cursor: pointer;
+}
+#modal-item .modal-content .close:hover {
+  color: orange;
+}
+#modal-item .modal-content #form-item {
+  width: 100%;
+  font-size: 17px;
+  font-weight: bold;
+}
+#modal-item .modal-content #form-item label {
+  display: block;
+}
+#modal-item .modal-content #form-item input {
+  display: block;
+  width: 80%;
+  margin: 10px 0;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: cursive;
+  color: royalblue;
+  border: none;
+  background-color: skyblue;
+  padding: 3px 10px;
+  border-radius: 15px;
+}
+#modal-item .modal-content #form-item #error-item {
+  display: none;
+  color: rgb(129, 0, 0);
+  padding: 2px 7px;
+  border: 2px solid black;
+  width: 80%;
+  border-radius: 5px;
+  background-color: rgb(255, 78, 78);
+}
+#modal-item .modal-content #form-item button {
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: cursive;
+  color: royalblue;
+  border: none;
+  background-color: skyblue;
+  padding: 3px 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+#modal-item .modal-content #form-item button:hover {
+  background-color: orange;
+}

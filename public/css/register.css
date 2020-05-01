@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#form-register {
+  max-width: 300px;
+  margin: auto;
+  margin-top: 100px;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  background-color: plum;
+  padding: 20px 30px 20px 30px;
+  border-radius: 20px;
+  color: rgb(126, 0, 0);
+  border: 3px dashed black;
+  margin-bottom: 100px;
+}
+
+#form-register #caption {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+#form-register label {
+  display: block;
+}
+
+#form-register label[for="male"],
+label[for="female"],
+label[for="other"] {
+  display: inline-block !important;
+  margin: 10px 15px 10px 0;
+}
+
+#form-register input[type="text"],
+input[type="password"] {
+  display: inline-block;
+  width: 80%;
+  margin: 10px 0;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 15px;
+  font-style: italic;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(204, 109, 0);
+}
+
+#form-register input[type="radio"] {
+  display: unset !important;
+}
+
+#form-register input[type="date"] {
+  font-family: cursive;
+  font-size: 20px;
+  color: rgb(126, 0, 0);
+  border: none;
+  padding: 3px 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+#form-register img {
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+#file-avatar {
+  width: 100%;
+}
+
+#form-register #error {
+  display: none;
+  font-size: 15px;
+  color: rgb(194, 5, 5);
+  padding: 5px 5px;
+  background-color: rgba(255, 0, 0, 0.377);
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+
+#form-register button {
+  margin-top: 10px;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  cursor: pointer;
+  padding: 3px 15px;
+  border: none;
+  border-radius: 5px;
+  color: palevioletred;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+#form-register button:hover {
+  color: rgb(116, 7, 7);
+  background-color: pink;
+}
+
+#form-register #link {
+  margin-top: 20px;
+}
+
+#form-register #link a {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(116, 7, 7);
+}
+
+#form-register #link a:hover {
+  text-decoration: underline;
+}

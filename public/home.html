@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link
+      rel="stylesheet"
+      href="./css/fontawesome-free-5.13.0-web/css/all.css"
+    />
+    <link rel="icon" href="./image/icon.ico" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css"
+    />
+    <title>TODO</title>
+  </head>
+  <body>
+    <header id="header">
+      <a href="/" id="brand">
+        <div class="logo"><img src="./image/icon.ico" alt="logo" /></div>
+        <div class="title">TODO</div>
+      </a>
+      <div id="user">
+        <a href="" class="avatar"
+          ><img src="./image/user.png" alt="avatar"
+        /></a>
+        <a href="" class="name">name user</a>
+        <a href="/logout" id="logout">Logout</a>
+      </div>
+    </header>
+
+    <div id="menu">
+      <ul id="menu-pc">
+        <li class="option create"><i class="fas fa-pencil-alt"></i></li>
+        <!-- <li class="option"><i class="fas fa-pencil-alt"></i></li>
+        <li class="option"><i class="fas fa-pencil-alt"></i></li>
+        <li class="option"><i class="fas fa-pencil-alt"></i></li> -->
+      </ul>
+    </div>
+
+    <!-- CREATE ITEM MODAL -->
+    <div id="modal-item">
+      <div class="modal-content">
+        <i class="fas fa-times close"></i>
+        <form action="/item" id="form-item" method="POST" enctype="multipart/form-data">
+          <input type="hidden" id="id">
+          <label for="name">Tác vụ</label>
+          <input type="text" name="name" id="name" placeholder="tên tác vụ">
+          <label for="deadline">Thời gian</label>
+          <input type="date" name="deadline" id="deadline">
+          <div id="error-item"></div>
+          <button type="submit">submit</button>
+        </form>
+      </div>
+    </div>
+
+    <main id="main">
+      <h3 class="title">Todo List :</h3>
+      <ul id="list-item"></ul>
+    </main>
+
+    <script src="./js/home.js"></script>
+  </body>
+</html>
