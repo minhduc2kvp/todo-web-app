@@ -17,7 +17,7 @@ const transporter = mailer.createTransport({
   service: "gmail",
   auth: {
     user: "minhduc2kvp@gmail.com",
-    pass: "mduc17062027",
+    pass: "mat khau khong phai nhu the nay dau :))",
   },
 });
 
